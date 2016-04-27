@@ -21,7 +21,7 @@ To successfully use the SAS Kernel you must have each of the following:
 1. [Download](https://www.continuum.io/downloads) and install Anaconda Python (make sure you get Python3.X). If you install Anaconda without super user rights (root or sudo) then other users on the system will not be able to access the SAS kernel.
    A couple notes that I've observed:
    * The default install location is the users home directory. This is fine for a single user install I would put it in a common location (`/opt`) if you're doing a system wide install
-   * One of the prompts is to add the path to your enviornment. I recommend you want to answer 'yes' to that question so that all the installing user has the executables in their path. If you're doing a system wide install (root or sudo) all the other users should add that path to their enviornmental variables  
+   * One of the prompts is to add the path to your environment. I recommend you want to answer 'yes' to that question so that all the installing user has the executables in their path. If you're doing a system wide install (root or sudo) all the other users should add that path to their environmental variables  
 1. Install sas_kernel. The sas_kernel has a dependency on saspy which is located [here](https://github.com/sassoftware/saspy).
    In the command below I'm assuming that `pip` maps to python3 if that is not the case the you might need to use `pip3` instead. 
    ```
