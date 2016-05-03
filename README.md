@@ -7,7 +7,7 @@ A SAS Kernel for [Jupyter Notebooks](http://www.jupyter.org)
 ## Dependencies
 * Python3.X
 * Jupyter
-* SAS 9.4 or higher
+* SAS 9.4 or higher -- This includes [SAS Viya](http://www.sas.com/en_us/software/viya.html)
 * Linux OS
 
 ## Install
@@ -57,7 +57,7 @@ These instructions assume you'll be installed system wide for all users using a 
 1. yum packages
    ```
    sudo yum install https://centos6.iuscommunity.org/ius-release.rpm
-   sudo yum install python35u gcc-c++ python35u-devel python35u-pip python35u-tools nodejs npm libselinux-python
+   sudo yum install python35u gcc-c++ python35u-devel python35u-pip python35u-tools
    ```
  
 1. pip
@@ -90,8 +90,6 @@ These instructions assume you'll be installed system wide for all users using a 
     1. edit the file with the correct path the SAS executable and include any options you wish it include in the SAS invocation. See examples in the file
 
 
-
-
 ## Improving Usability
 There are a few NBExtensions that have been created to make working with Jupyter notebooks more productive. These are largely the result of pain points from my use of SAS Kernel for programming tasks. The extensions can be found [here](nbextensions.md). The list includes:
 * SAS Log -- which show the SAS log for the last executed cell or the entire log since the last (re)start of the notebook
@@ -104,7 +102,7 @@ Details for installing the extensions for SAS can be found [here](./sas_kernel/n
 The SAS kernel can be used with JupyterHub for more information look [here](https://jupyterhub.readthedocs.org/en/latest/) 
 
 ## NBGrader
-[nbgrader](http://nbgrader.readthedocs.org/en/stable/) is a system for assigning and grading notebooks and extends jupyter. I have a number of contributions that I'm currently working on in conjuction with teaching SAS programming in a classroom setting. You can see my forked repo [here](https://github.com/jld23/nbgrader)
+[nbgrader](http://nbgrader.readthedocs.org/en/stable/) is a system for assigning and grading notebooks and extends jupyter. I have a number of contributions that I'm currently working on in conjunction with teaching SAS programming in a classroom setting. You can see my forked repo [here](https://github.com/jld23/nbgrader)
 
 ## FAQ
 * Is there a SAS Magic that I can access from a python kernel?
@@ -145,4 +143,4 @@ The SAS kernel can be used with JupyterHub for more information look [here](http
 
 * I restarted my SAS Kernel and now my WORK library is now empty. What happened?
 
-    When you restart the kernel in a notebook you are terminating the current SAS session and starting a new one. All of the temporary artifacts, datasets in the WORK library, assigned libnames, filename, WORK macros, and so on are destroyed.
+    When you restart the kernel in a notebook you are terminating the current SAS session and starting a new one. All of the temporary artifacts, data sets in the WORK library, assigned libnames, filename, WORK macros, and so on are destroyed.
